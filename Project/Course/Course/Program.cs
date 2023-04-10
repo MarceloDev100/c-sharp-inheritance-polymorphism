@@ -1,17 +1,17 @@
 ﻿using Course.Entities;
 
 /*
-   ******** Override *********
-   
-   - Method implementation from a superclass in subclass.
-   - In other words: A method in subclass that already exists
-   in superclass(base class) is reimplemented to provide a different behavior.
-   - To allow a common method to be overriden, it must include the virtual prefix.
-   - When overriding a method, we must include the override prefix in it .
+   ******** Using "base" keyword *********
+   *
+   - It's possible to call a superclass (or base class) implementation using "base" keyword.
+   - Suppose withdraw's rule regarding to SavingAccount is to perform
+   the withdraw using  a superclass (Account) and after that, subtract 2.0 from it.
+   - In the withdraw method of SavingAccount class, we may call withdraw method of base class 
+   (Account class) using "base" word. Next, it is subtracted 2.0 from balance.
 
-   - Suppose the following rules for withdraw:
-   - Common account:  is charged a fee of 5.0
-   - Saving account:  no fee is charged.
+   - "base" keyword is also used in a subclass construct to reuse the superclass construct
+   passing data to it.
+  
  */
 
 Account acc1 = new Account(1001, "Alex", 500.0);

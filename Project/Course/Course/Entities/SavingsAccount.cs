@@ -19,10 +19,10 @@
             Balance += Balance * InterestRate;
         }
 
-        // Overrides Withdraw method in Account class
         public override void Withdraw(double amount)
         {
-            Balance -= amount;
+            base.Withdraw(amount);
+            Balance -= 2.0;
         }
     }
 }
