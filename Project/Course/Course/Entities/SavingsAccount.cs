@@ -1,6 +1,8 @@
 ﻿namespace Course.Entities
 {
-   class SavingsAccount : Account
+    // sealed : prevents SavingsAccount class from being inherited
+    // It may protect some business rules when avoiding this class to be inherited
+    sealed class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -14,7 +16,7 @@
             InterestRate = interestRate;
         }
 
-        public void UpdateBalance ()
+        public void UpdateBalance()
         {
             Balance += Balance * InterestRate;
         }
