@@ -2,7 +2,7 @@
 {
     // sealed : prevents SavingsAccount class from being inherited
     // It may protect some business rules when avoiding this class to be inherited
-    sealed class SavingsAccount : Account
+    class SavingsAccount : Account
     {
         public double InterestRate { get; set; }
 
@@ -21,7 +21,9 @@
             Balance += Balance * InterestRate;
         }
 
-        public override void Withdraw(double amount)
+        // sealed method: Only possible when applied to overridden methods.
+        // this method can't be overridden again in other subclass
+        public sealed override void Withdraw(double amount)
         {
             base.Withdraw(amount);
             Balance -= 2.0;

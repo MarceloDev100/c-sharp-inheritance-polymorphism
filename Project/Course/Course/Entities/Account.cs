@@ -17,7 +17,7 @@
             Balance = balance;
         }
 
-        /* virtual: allows this method to be overriden in subclasses*/
+        /* virtual: allows this method to be overridden in subclasses */
         public virtual void Withdraw(double amount)
         {
             Balance -= amount + 5.0; 
