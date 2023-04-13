@@ -1,6 +1,7 @@
 ﻿namespace Course.Entities
 {
-    class Account
+    // abstract classes can't be instantiated
+    abstract class Account
     {
         public int Number { get; protected set; }
         public string Holder { get; protected set; }
